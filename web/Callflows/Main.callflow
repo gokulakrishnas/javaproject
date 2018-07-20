@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:datatypes="http://studio.genesyslab.com/common/datatypes/" xmlns:datatypes_1="http://studio.genesyslab.com/gvp/datatypes/" xmlns:gvp="http://studio.genesyslab.com/gvp/" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xsi:schemaLocation="http://studio.genesyslab.com/common/datatypes/ http://studio.genesyslab.com/common/#//datatypes http://studio.genesyslab.com/gvp/datatypes/ http://studio.genesyslab.com/gvp/#//datatypes">
   <gvp:CallflowDiagram xmi:id="_xZT6QSyyEd-N8_wa8-CIiw" name="Main" designedUsing="Composer 8.1.400.17">
     <history>8.1.300.01</history>
-    <blocks xmi:type="gvp:EntryBlock" xmi:id="_UXE4YNz8EeKItrUHz40pEQ" name="Entry1" starting="true" category="Entry">
+    <blocks xmi:type="gvp:EntryBlock" xmi:id="_UXE4YNz8EeKItrUHz40pEQ" name="Entry" starting="true" category="Entry">
       <variables xmi:type="datatypes:Variable" xmi:id="_vKMcAOfBEeeJlYNrYDfFTw" name="APP_LANGUAGE" value="'en-US'" description="Application Language" type="System"/>
       <variables xmi:type="datatypes:Variable" xmi:id="_vKMcAefBEeeJlYNrYDfFTw" name="APP_ASR_LANGUAGE" value="'en-US'" description="ASR Language" type="System"/>
       <variables xmi:type="datatypes:Variable" xmi:id="_vKMcAufBEeeJlYNrYDfFTw" name="PREV_APP_LANGUAGE" value="'undefined'" description="Temporary Value of Previous Application Language" type="System"/>
