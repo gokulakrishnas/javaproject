@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- grammar used for ImmediatePlaybackTmpField, designed to never match -->
+
+<grammar xmlns="http://www.w3.org/2001/06/grammar" xml:lang="en"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3.org/2001/06/grammar
+                             http://www.w3.org/TR/speech-grammar/grammar.xsd"
+         version="1.0" mode="voice" root="LOCATION" tag-format="semantics/1.0">
+         
+	<rule id="LOCATION" scope="private">
+    	<one-of>
+			<item>Austin</item>
+			<item>Crosston</item>
+			<item>Boston</item>
+			<item>Denver</item>
+			<item>Houston</item>
+			<item>Chicago</item>
+			<item>Detroit</item>
+			<item>Portland</item>
+		</one-of>
+	</rule>
+	
+</grammar>

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Setting up for the database template application</title>
+    <style type="text/css">
+        .style1
+        {
+            font-family: Arial;
+            font-size: small;
+        }
+        .style4
+        {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        .style5
+        {
+            font-family: Arial;
+            font-size: large;
+            font-weight: bold;
+            color: #003399;
+        }
+    </style>
+</head>
+<body bgcolor="#dfdfff">
+    <p class="style5">
+        Composer - Database Stocks Sample Project
+    </p>
+    <p class="style1">
+        This project queries one database table for a list of companies using a DBData 
+        block. It then accepts a company name as input using the DBInput block against 
+        the set of company names returned by the DBData block. After accepting a valid 
+        input, it queries another table in the same database for the latest stock quote 
+        for the company and speaks it out.</p>
+    <p class="style1">
+        <span class="style4">Setup Instructions </span>
+    </p>
+    <p class="style1">
+        1. Open the /db/connection.properties file in the Connections Editor.
+    </p>
+    <p class="style1">
+        2.&nbsp; Create a new connection - use the default name &quot;ConnectionProfile1&quot;</p>
+    <p class="style1">
+        3.&nbsp; Provide details for your database. <b>Note: </b>This application works 
+        only with SQLServer databases.
+    </p>
+    <p class="style1">
+        4.&nbsp; Test the connection to make sure it works.
+    </p>
+    <p class="style1">
+        5.&nbsp; Create the required tables in your database and populate them with 
+        sample data using scripts in db/Scripts folder. For SQLServer, use SQLServer.sql 
+        file. You will need to execute this script in the correct database using 
+        SQLServer Management Studio or another tool that can work with databases.</p>
+
+</body>
+</html>

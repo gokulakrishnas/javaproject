@@ -1,0 +1,57 @@
+<vxml version="2.1" xmlns="http://www.w3.org/2001/vxml"
+	xmlns:gvp="http://www.genesyslab.com/2006/vxml21-extension"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<form>
+		<var name="locationResults" expr="''" />
+		<var name="index" expr="1"/>
+		<var name="city"/>
+		
+		<block>
+		<prompt bargein="false">
+			There are multiple locations matching your input.
+			<foreach item="item" array="locationResults">
+				<value expr="item.utterance+','" />
+			</foreach>
+		</prompt>
+		</block>
+		<field name="processNBest" type="digits">
+			<property name="inputmodes" value="dtmf voice" />
+			<prompt bargein="true">
+			
+			Press or say 
+				<foreach item="item" array="locationResults">
+					<value expr="index++"/> for
+					<value expr="item.utterance" />
+				</foreach>
+				To start over press or say zero.
+			</prompt>
+			<filled>
+				<if cond="processNBest== 0">
+					<!-- Start over. -->
+					<assign name="index" expr="1" />
+					<clear />
+					<elseif cond="processNBest &gt; locationResults.length" />
+					<!-- No such utterance; prompt again. -->
+					<assign name="index" expr="1" />
+					<prompt>Unrecognized option.</prompt>
+					<clear namelist="processNBest" />
+					<else />
+					<assign name="city" expr="locationResults[processNBest-1].utterance" />
+				</if>
+			</filled>
+			<noinput>
+				<assign name="index" expr="1" />
+				<prompt>Sorry I did not hear you.</prompt>
+				<reprompt />
+			</noinput>
+			<nomatch>
+				<assign name="index" expr="1" />
+				<prompt>Sorry I did not understand.</prompt>
+				<reprompt />
+			</nomatch>
+		</field>
+		<block name="pickUp">
+			<return namelist="city" />
+		</block>
+	</form>
+</vxml>

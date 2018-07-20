@@ -77,11 +77,11 @@
 	<!-- Global links -->
 	<form>
 		<block>
-			<goto next="#Entry" />
+			<goto next="#Entry1" />
 		</block>
 	</form>
 	<!-- This is the Entry block -->
-	<form id="Entry">
+	<form id="Entry1">
 		<block name="Entry">
 			<goto next="#WebService1" />
 		</block>
