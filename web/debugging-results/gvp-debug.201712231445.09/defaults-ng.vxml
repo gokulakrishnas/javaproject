@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<vxml version="2.0" xmlns="http://www.w3.org/2001/vxml">
+	<property name="confidencelevel" value="0.5"/>
+	<property name="bargeinlevel" value="0.5"/>
+	<property name="sensitivity" value="0.5"/>
+	<property name="speedvsaccuracy" value="0.5"/>
+	<property name="completetimeout" value="0.4s"/>
+	<property name="incompletetimeout" value="1s"/>
+	<property name="asrinittimeout" value="30s"/>
+	<property name="interdigittimeout" value="3s"/>
+	<property name="termtimeout" value="0s"/>
+	<property name="termchar" value="#"/>
+	<property name="bargein" value="true"/>
+	<property name="timeout" value="10s"/>
+	<property name="fetchaudio" value="builtin:default_audio/background_audio.vox"/>
+	<property name="fetchaudiodelay" value="1s"/>
+	<property name="fetchaudiominimum" value="0s"/>
+	<property name="fetchtimeout" value="30s"/>
+	<property name="inputmodes" value="dtmf voice"/>
+	<property name="com.genesyslab.minrecordtime" value="250ms"/>
+	<property name="com.genesyslab.maxrecordtime" value="600000ms"/>
+	<property name="com.genesyslab.finalsilence" value="4s"/>
+	<property name="com.genesyslab.dtmf.offboard_recognition" value="true"/>
+	<property name="com.genesyslab.asr.loadgrammartimeout" value="30s"/>
+	<property name="com.genesyslab.savetmpfiles" value="none"/>
+	<property name="com.genesyslab.savetmpfilesmode" value="immediate"/>
+	<property name="com.genesyslab.onexit.keeptmpfiles" value="true"/>
+	<property name="com.genesyslab.audiocontrol" value="false"/>
+	<property name="com.genesyslab.audio.prev" value="0"/>
+	<property name="com.genesyslab.audio.skipahead" value="1"/>
+	<property name="com.genesyslab.audio.skipback" value="2"/>
+	<property name="com.genesyslab.audio.softer" value="3"/>
+	<property name="com.genesyslab.audio.louder" value="4"/>
+	<property name="com.genesyslab.audio.pause" value="5"/>
+	<property name="com.genesyslab.audio.next" value="6"/>
+	<property name="com.genesyslab.audio.stop" value="7"/>
+	<property name="com.genesyslab.audio.slower" value="8"/>
+	<property name="com.genesyslab.audio.faster" value="9"/>
+	<property name="com.genesyslab.logtoasr" value="false"/>
+  <property name="com.genesyslab.videotext.fontname" value=""/>
+  <property name="com.genesyslab.videotext.fontstyle" value=""/>
+  <property name="com.genesyslab.videotext.fontsize" value="0"/>
+  <property name="com.genesyslab.videotext.fontwidth" value="0"/>
+  <property name="com.genesyslab.videotext.fontcolor" value=""/>
+  <property name="com.genesyslab.videotext.bgcolor" value=""/>
+  <property name="com.genesyslab.videotext.xoffset" value="0"/>
+  <property name="com.genesyslab.videotext.yoffset" value="0"/>
+  <property name="com.genesyslab.streamingaudio" value="false"/>
+
+  <catch event="help">
+		<reprompt/>
+	</catch>
+
+	<catch event="cancel">
+    </catch>
+
+	<catch event="exit">
+		<exit/>
+	</catch>
+
+	<noinput>
+		<reprompt/>
+	</noinput>
+
+	<nomatch>
+		<reprompt/>
+		<prompt>
+			<audio src="builtin:default_audio/i_do_not_understand.vox"/>
+		</prompt>
+	</nomatch>
+
+	<catch event="maxspeechtimeout">
+		<reprompt/>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/i_do_not_understand.vox"/>
+		</prompt>
+	</catch>
+
+	<catch event="error.internal">
+		<log label="com.genesyslab.quality.failure">error.internal event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/sorry_there_has_been_an_internal_error.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.script">
+		<log label="com.genesyslab.quality.failure">error.script event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/there_is_an_error_in_the_application.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.noresource.asr">
+		<log label="com.genesyslab.quality.failure">error.noresource.asr event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/sorry_there_is_no_asr_resource_available.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.asr.unknownengine">
+		<log label="com.genesyslab.quality.failure">error.asr.unknownengine event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/the_specified_asr_engine_is_unknown.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.grammar.asr">
+		<log label="com.genesyslab.quality.failure">error.grammar.asr event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/there_is_an_error_in_the_speech_grammar.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.asr.exceedlicense">
+		<log label="com.genesyslab.quality.failure">error.asr.exceedlicense event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/sorry_you_have_exceeded_your_asr_license.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.noresource.tts">
+		<log label="com.genesyslab.quality.failure">error.noresource.tts event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/sorry_there_is_no_tts_resource_available.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.tts.unknownengine">
+		<log label="com.genesyslab.quality.failure">error.tts.unknownengine event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/sorry_unknown_tts_engine_is_specified.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.tts.badcapability">
+		<log label="com.genesyslab.quality.failure">error.tts.badcapability event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/sorry_the_specified_tts_capability_is_not_supported_now.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.tts.exceedlicense">
+		<log label="com.genesyslab.quality.failure">error.tts.exceedlicense event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/sorry_you_have_exceeded_your_tts_license.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.tts.badtext">
+		<log label="com.genesyslab.quality.failure">error.tts.badtext event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/a_bad_text_tts_error_has_been_detected.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.grammar.dtmf">
+		<log label="com.genesyslab.quality.failure">error.grammar.dtmf event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/there_is_an_error_in_the_dtmf_grammar.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.application">
+		<log label="com.genesyslab.quality.failure">error.application event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/there_is_an_error_in_the_application.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.pagetimeout">
+		<log label="com.genesyslab.quality.failure">error.pagetimeout event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/the_page_has_timed_out.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.badfetch">
+		<log label="com.genesyslab.quality.failure">error.badfetch event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/the_requested_page_cannot_be_found.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.semantic">
+		<log label="com.genesyslab.quality.failure">error.semantic event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/there_is_a_semantic_error_in_the_application.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.noauthorization">
+		<log label="com.genesyslab.quality.failure">error.noauthorization event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/the_requested_operation_is_not_authorized.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.unsupported.language">
+		<log label="com.genesyslab.quality.failure">error.unsupported.language event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/language_not_currently_supported.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.unsupported.format">
+		<log label="com.genesyslab.quality.failure">error.unsupported.format event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/format_not_currently_supported.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.unsupported.element">
+		<log label="com.genesyslab.quality.failure">error.unsupported.element event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/element_not_currently_supported.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.unsupported.objectname">
+		<log label="com.genesyslab.quality.failure">error.unsupported.objectname event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/object_not_currently_supported.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="_error.eventhandler.notfound">
+		<log label="com.genesyslab.quality.failure">_error.eventhandler.notfound event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/event_handler_not_found.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="telephone.disconnect connection.disconnect">
+		<log>Caught some kind of disconnect in the defaults voicexml page</log>
+		<exit/>
+	</catch>
+
+	<catch event="error.asr">
+		<log label="com.genesyslab.quality.failure">error.asr event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/a_speech_recognition_error_has_been_detected.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error.tts">
+		<log label="com.genesyslab.quality.failure">error.tts event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/a_tts_error_has_been_detected.vox"/>
+			<audio src="builtin:default_audio/goodbye.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="error .">
+		<log label="com.genesyslab.quality.failure">error event terminated session</log>
+		<prompt bargein="false">
+			<audio src="builtin:default_audio/sorry_there_has_been_an_error.vox"/>
+		</prompt>
+		<exit/>
+	</catch>
+
+	<catch event="." count="1000">
+		<exit/>
+	</catch>
+
+</vxml>

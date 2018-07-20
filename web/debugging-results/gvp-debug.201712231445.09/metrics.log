@@ -1,0 +1,93 @@
+2017-12-23 14:45:12.040 - appl_begin INIT_URL=http://GCDTP054.GADAGET.COM:80/web/src-gen/Main.vxml|DEFAULTS=file://c:\Program Files\GCTI\gvp\VP Media Control Platform 8.1\GVP_Media_Control_Platform\config\defaults-ng.vxml|ANI=sip:5115@GCDTP054.GADAGET.COM:50601|DNIS=sip:dialog@192.168.1.14:5070;gvp.debug=true;voicexml=http://GCDTP054.GADAGET.COM:80/web%2Fsrc-gen%2FMain.vxml|PROTOCOLNAME=sip|PROTOCOLVERSION=2.0|CALLIDREF=ef721376df5a6cb8440e4d8230704853@192.168.1.154|VXMLI_TYPE=NGI - 5
+2017-12-23 14:45:12.040 - wf_lookup http://GCDTP054.GADAGET.COM:80/web/src-gen/Main.vxml - 5
+2017-12-23 14:45:12.040 - fetch_start document:http://GCDTP054.GADAGET.COM:80/web/src-gen/Main.vxml - 5
+2017-12-23 14:45:12.040 - wf_lookup file://c:/Program Files/GCTI/gvp/VP Media Control Platform 8.1/GVP_Media_Control_Platform/config/defaults-ng.vxml - 5
+2017-12-23 14:45:12.040 - fetch_start document:file://c:/Program Files/GCTI/gvp/VP Media Control Platform 8.1/GVP_Media_Control_Platform/config/defaults-ng.vxml - 5
+2017-12-23 14:45:12.040 - wf_arrived s (file):file://c:/Program Files/GCTI/gvp/VP Media Control Platform 8.1/GVP_Media_Control_Platform/config/defaults-ng.vxml - 5
+2017-12-23 14:45:12.040 - wf_arrived s (direct):http://GCDTP054.GADAGET.COM:80/web/src-gen/Main.vxml - 5
+2017-12-23 14:45:13.551 - fetch_start script:http://GCDTP054.GADAGET.COM:80/web/include/common.js - 79
+2017-12-23 14:45:13.551 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/include/common.js - 79
+2017-12-23 14:45:13.551 - eval_script external:../include/common.js done - 79
+2017-12-23 14:45:13.551 - fetch_start script:http://GCDTP054.GADAGET.COM:80/web/include/ctic.js - 79
+2017-12-23 14:45:13.551 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/include/ctic.js - 79
+2017-12-23 14:45:13.551 - eval_script external:../include/ctic.js done - 79
+2017-12-23 14:45:13.551 - fetch_start script:http://GCDTP054.GADAGET.COM:80/web/include/json.js - 79
+2017-12-23 14:45:13.551 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/include/json.js - 79
+2017-12-23 14:45:13.551 - eval_script external:../include/json.js done - 79
+2017-12-23 14:45:13.551 - fetch_start script:http://GCDTP054.GADAGET.COM:80/web/include/DataAccess.js - 79
+2017-12-23 14:45:13.551 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/include/DataAccess.js - 79
+2017-12-23 14:45:13.551 - eval_script external:../include/DataAccess.js done - 79
+2017-12-23 14:45:13.551 - eval_script inline:2328 done - 79
+2017-12-23 14:45:13.551 - eval_expr <Script>expr{:AppState.VOXFILEDIR + '/PromptSwitch.js'}=../Resources/Prompts/PromptSwitch.js - 79
+2017-12-23 14:45:13.551 - fetch_start script:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/PromptSwitch.js - 79
+2017-12-23 14:45:13.551 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/PromptSwitch.js - 79
+2017-12-23 14:45:13.551 - eval_script external:../Resources/Prompts/PromptSwitch.js done - 79
+2017-12-23 14:45:13.551 - eval_expr <Script>expr{:AppState.VOXFILEDIR + '/en-US/en-US.js'}=../Resources/Prompts/en-US/en-US.js - 79
+2017-12-23 14:45:13.551 - fetch_start script:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/en-US.js - 79
+2017-12-23 14:45:13.551 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/en-US.js - 79
+2017-12-23 14:45:13.551 - eval_script external:../Resources/Prompts/en-US/en-US.js done - 79
+2017-12-23 14:45:13.551 - eval_script inline:21 done - 79
+2017-12-23 14:45:13.551 - eval_expr <Script>expr{:AppState.VOXFILEDIR + '/en-US/customprompts.js'}=../Resources/Prompts/en-US/customprompts.js - 79
+2017-12-23 14:45:13.551 - fetch_start script:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/customprompts.js - 79
+2017-12-23 14:45:13.552 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/customprompts.js - 79
+2017-12-23 14:45:13.552 - eval_script external:../Resources/Prompts/en-US/customprompts.js done - 79
+2017-12-23 14:45:13.552 - compile_done :http://GCDTP054.GADAGET.COM:80/web/src-gen/Main.vxml - 79
+2017-12-23 14:45:13.552 - form_select :__FORMITEM_NAME_$608$_:BLOCK - 79
+2017-12-23 14:45:13.964 - goto :#Entry1 - 85
+2017-12-23 14:45:13.964 - form_enter :Entry1 - 85
+2017-12-23 14:45:13.964 - form_select :Entry:BLOCK - 85
+2017-12-23 14:45:14.377 - goto :#WebService1 - 99
+2017-12-23 14:45:14.377 - form_enter :WebService1 - 99
+2017-12-23 14:45:14.377 - form_select :__FORMITEM_NAME_$610$_:BLOCK - 99
+2017-12-23 14:45:14.792 - eval_cond :{(AppState.COMPOSER_WSSTUBBING == '1') || (AppState.COMPOSER_WSSTUBBING == 1)}=false - 148
+2017-12-23 14:45:14.792 - eval_script inline:1842 done - 148
+2017-12-23 14:45:21.835 - fetch_start data:http://GCDTP054.GADAGET.COM:80/web/include/getWebServiceData.aspx - 152
+2017-12-23 14:45:21.835 - prompt  - 152
+2017-12-23 14:45:21.835 - fetch_start audio:file://C:\Program Files\GCTI\gvp\VP Media Control Platform 8.1\GVP_Media_Control_Platform\audio/ulaw\default_audio/background_audio.vox - 152
+2017-12-23 14:45:21.835 - fetch_end Done (file):file://C:\Program Files\GCTI\gvp\VP Media Control Platform 8.1\GVP_Media_Control_Platform\audio/ulaw\default_audio/background_audio.vox - 152
+2017-12-23 14:45:21.835 - prompt_play audio|builtin:default_audio/background_audio.vox - 152
+2017-12-23 14:45:21.835 - prompt_end done - 152
+2017-12-23 14:45:21.835 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/include/getWebServiceData.aspx - 152
+2017-12-23 14:45:21.835 - eval_expr <Data>expr{:var WebService1Response = {"errorMsg": "error.com.genesyslab.composer.webservice.badFetch message=Unable to connect to the remote server"};}=undefined - 152
+2017-12-23 14:45:22.236 - goto :#Assign1 - 161
+2017-12-23 14:45:22.236 - form_enter :Assign1 - 161
+2017-12-23 14:45:22.236 - form_select :__FORMITEM_NAME_$611$_:BLOCK - 161
+2017-12-23 14:45:22.848 - goto :#Prompt1 - 171
+2017-12-23 14:45:22.848 - form_enter :Prompt1 - 171
+2017-12-23 14:45:22.848 - form_select :Prompt1P0:BLOCK - 171
+2017-12-23 14:45:23.054 - eval_expr <Prompt>expr{:AppState.APP_LANGUAGE}=en-US - 173
+2017-12-23 14:45:23.254 - eval_expr <Prompt>expr{:AppState.APP_LANGUAGE}=en-US - 178
+2017-12-23 14:45:23.254 - form_select :__FORMITEM_NAME_$612$_:BLOCK - 178
+2017-12-23 14:45:24.127 - goto :#Exit1 - 92
+2017-12-23 14:45:24.127 - form_enter :Exit1 - 92
+2017-12-23 14:45:24.127 - form_select :__FORMITEM_NAME_$609$_:BLOCK - 92
+2017-12-23 14:45:28.425 - prompt  - 0
+2017-12-23 14:45:28.425 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/u.vox - 0
+2017-12-23 14:45:28.425 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/u.vox - 0
+2017-12-23 14:45:28.425 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/u.vox - 0
+2017-12-23 14:45:28.425 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/n.vox - 0
+2017-12-23 14:45:28.425 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/n.vox - 0
+2017-12-23 14:45:28.425 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/n.vox - 0
+2017-12-23 14:45:28.425 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/d.vox - 0
+2017-12-23 14:45:28.425 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/d.vox - 0
+2017-12-23 14:45:28.425 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/d.vox - 0
+2017-12-23 14:45:28.425 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/e.vox - 0
+2017-12-23 14:45:28.425 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/e.vox - 0
+2017-12-23 14:45:28.425 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/e.vox - 0
+2017-12-23 14:45:28.425 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/f.vox - 0
+2017-12-23 14:45:28.425 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/f.vox - 0
+2017-12-23 14:45:28.425 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/f.vox - 0
+2017-12-23 14:45:28.425 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/i.vox - 0
+2017-12-23 14:45:28.426 - fetch_end Done (direct):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/i.vox - 0
+2017-12-23 14:45:28.426 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/i.vox - 0
+2017-12-23 14:45:28.426 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/n.vox - 0
+2017-12-23 14:45:28.426 - fetch_end Done (revalidated):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/n.vox - 0
+2017-12-23 14:45:28.426 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/n.vox - 0
+2017-12-23 14:45:28.426 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/e.vox - 0
+2017-12-23 14:45:28.426 - fetch_end Done (revalidated):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/e.vox - 0
+2017-12-23 14:45:28.426 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/e.vox - 0
+2017-12-23 14:45:28.426 - fetch_start audio:http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/d.vox - 0
+2017-12-23 14:45:28.427 - fetch_end Done (revalidated):http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/d.vox - 0
+2017-12-23 14:45:28.427 - prompt_play audio|http://GCDTP054.GADAGET.COM:80/web/Resources/Prompts/en-US/letters/d.vox - 0
+2017-12-23 14:45:28.427 - prompt_end done - 0
+2017-12-23 14:45:28.427 - appl_end  - 0

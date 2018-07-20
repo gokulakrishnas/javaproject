@@ -1,0 +1,18 @@
+2017-12-23 14:45:19,258 [6] DEBUG getWebService - _________________________________________________
+2017-12-23 14:45:19,276 [6] DEBUG getWebService - getWebService() In
+2017-12-23 14:45:19,387 [6] DEBUG getWebService - fetchURL() in
+2017-12-23 14:45:19,389 [6] DEBUG getWebService - method: SOAP
+2017-12-23 14:45:19,524 [6] DEBUG getWebService - generateSOAPRequest() in
+2017-12-23 14:45:19,524 [6] DEBUG getWebService - authenAccess: Anonymous
+2017-12-23 14:45:19,549 [6] DEBUG getWebService - returnResult: <HelloWorld xmlns="http://tempuri.org/" />
+2017-12-23 14:45:19,549 [6] DEBUG getWebService - generateSOAPRequest() out
+2017-12-23 14:45:21,765 [6] ERROR getWebService - Received SOAP Fault: System.Net.WebException: Unable to connect to the remote server ---> System.Net.Sockets.SocketException: No connection could be made because the target machine actively refused it 127.0.0.1:49512
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- End of inner exception stack trace ---
+   at System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   at System.Net.HttpWebRequest.GetRequestStream()
+   at ASP.include_getwebservicedata_aspx.fetchURL(String url, String protocol, String parameters, String readWriteTimeout, String conTimeout, String authenAccess, String userName, String password, String methodName, String soapActionURI, String targetNameSpace, OrderedDictionary paramTable, String inputCustomHeadersString, String certStoreName, String certName, String certStoreLocation, String sigAlgorithm, JObject namespacePrefixMap, String customPrefix, Boolean enableNSPrefix, Boolean prefixForChildTags, Boolean enableProxy, Int32 proxyPort, String proxyHost, String proxyUserName, String proxyPassword, String customSOAPEnvFile, String variableScopeName, JObject appStateJSON, JObject userTypeVarsJSON)
+2017-12-23 14:45:21,766 [6] DEBUG getWebService - result: {"errorMsg": "error.com.genesyslab.composer.webservice.badFetch message=Unable to connect to the remote server"}
+2017-12-23 14:45:21,766 [6] DEBUG getWebService - fetchURL() out
+2017-12-23 14:45:21,767 [6] DEBUG getWebService - getWebService() Out
